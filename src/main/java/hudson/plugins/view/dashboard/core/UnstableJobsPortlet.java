@@ -6,7 +6,6 @@ import hudson.plugins.view.dashboard.DashboardPortlet;
 import hudson.views.JobColumn;
 import hudson.views.ListViewColumn;
 import hudson.views.StatusColumn;
-import hudson.views.WeatherColumn;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,7 +30,7 @@ public class UnstableJobsPortlet extends DashboardPortlet {
    private boolean recurse;
    
    private static final Collection<ListViewColumn> COLUMNS =
-           Arrays.asList(new StatusColumn(), new WeatherColumn(), new JobColumn());
+           Arrays.asList(new StatusColumn(), new JobColumn());
 
    @DataBoundConstructor
    public UnstableJobsPortlet(String name, boolean showOnlyFailedJobs, boolean recurse) {
